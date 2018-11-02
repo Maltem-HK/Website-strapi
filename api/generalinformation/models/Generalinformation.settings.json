@@ -1,0 +1,21 @@
+{
+  "connection": "default",
+  "collectionName": "generalinformation",
+  "info": {
+    "name": "generalinformation",
+    "description": ""
+  },
+  "options": {
+    "timestamps": true
+  },
+  "attributes": {
+    "description": {
+      "default": "",
+      "type": "text"
+    },
+    "agglomerate": {
+      "model": "agglomerate",
+      "via": "generalinformation"
+    }
+  }
+}

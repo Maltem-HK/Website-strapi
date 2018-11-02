@@ -1,0 +1,21 @@
+{
+  "connection": "default",
+  "collectionName": "",
+  "info": {
+    "name": "welcomeword",
+    "description": ""
+  },
+  "options": {
+    "timestamps": true
+  },
+  "attributes": {
+    "word": {
+      "default": "",
+      "type": "string"
+    },
+    "agglomerate": {
+      "model": "agglomerate",
+      "via": "welcomewords"
+    }
+  }
+}

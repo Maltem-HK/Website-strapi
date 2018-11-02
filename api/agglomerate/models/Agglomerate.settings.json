@@ -1,0 +1,29 @@
+{
+  "connection": "default",
+  "collectionName": "aggregate",
+  "info": {
+    "name": "agglomerate",
+    "description": ""
+  },
+  "options": {
+    "timestamps": true
+  },
+  "attributes": {
+    "name": {
+      "default": "",
+      "type": "string"
+    },
+    "socialnetworks": {
+      "collection": "socialnetwork",
+      "via": "aggregate"
+    },
+    "welcomewords": {
+      "collection": "welcomeword",
+      "via": "agglomerate"
+    },
+    "generalinformation": {
+      "model": "generalinformation",
+      "via": "agglomerate"
+    }
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "connection": "default",
+  "collectionName": "",
+  "info": {
+    "name": "socialnetwork",
+    "description": ""
+  },
+  "options": {
+    "timestamps": true
+  },
+  "attributes": {
+    "name": {
+      "default": "",
+      "type": "string"
+    },
+    "url": {
+      "default": "",
+      "type": "string"
+    },
+    "aggregate": {
+      "model": "agglomerate",
+      "via": "socialnetworks"
+    }
+  }
+}

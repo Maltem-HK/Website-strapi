@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/welcomewords",
+      "handler": "Welcomeword.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/welcomewords/count",
+      "handler": "Welcomeword.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/welcomewords/:_id",
+      "handler": "Welcomeword.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/welcomewords",
+      "handler": "Welcomeword.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/welcomewords/:_id",
+      "handler": "Welcomeword.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/welcomewords/:_id",
+      "handler": "Welcomeword.destroy",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}
