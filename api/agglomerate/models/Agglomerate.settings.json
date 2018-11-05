@@ -24,6 +24,10 @@
     "generalinformation": {
       "model": "generalinformation",
       "via": "agglomerate"
+    },
+    "team": {
+      "model": "team",
+      "via": "agglomerate"
     }
   }
 }

@@ -1,0 +1,29 @@
+{
+  "connection": "default",
+  "collectionName": "team",
+  "info": {
+    "name": "team",
+    "description": ""
+  },
+  "options": {
+    "timestamps": true
+  },
+  "attributes": {
+    "name": {
+      "default": "",
+      "type": "string"
+    },
+    "members": {
+      "collection": "member",
+      "via": "team"
+    },
+    "agglomerate": {
+      "model": "agglomerate",
+      "via": "team"
+    },
+    "description": {
+      "default": "",
+      "type": "text"
+    }
+  }
+}

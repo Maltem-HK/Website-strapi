@@ -1,0 +1,47 @@
+{
+  "connection": "default",
+  "collectionName": "member",
+  "info": {
+    "name": "member",
+    "description": ""
+  },
+  "options": {
+    "timestamps": true
+  },
+  "attributes": {
+    "firstName": {
+      "default": "",
+      "type": "string"
+    },
+    "description": {
+      "default": "",
+      "type": "string"
+    },
+    "position": {
+      "default": "",
+      "type": "string"
+    },
+    "photo": {
+      "model": "file",
+      "via": "related",
+      "plugin": "upload",
+      "required": false
+    },
+    "email": {
+      "default": "",
+      "type": "email"
+    },
+    "team": {
+      "model": "team",
+      "via": "members"
+    },
+    "linkedin": {
+      "default": "",
+      "type": "string"
+    },
+    "lastName": {
+      "default": "",
+      "type": "string"
+    }
+  }
+}

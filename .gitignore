@@ -107,3 +107,4 @@ coverage
 ############################
 
 .env
+public/uploads/*
