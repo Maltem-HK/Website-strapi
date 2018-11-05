@@ -28,6 +28,10 @@
     "team": {
       "model": "team",
       "via": "agglomerate"
+    },
+    "keyfigures": {
+      "collection": "keyfigure",
+      "via": "agglomerate"
     }
   }
 }

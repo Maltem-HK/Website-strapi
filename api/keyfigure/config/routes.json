@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/keyfigures",
+      "handler": "Keyfigure.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/keyfigures/count",
+      "handler": "Keyfigure.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/keyfigures/:_id",
+      "handler": "Keyfigure.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/keyfigures",
+      "handler": "Keyfigure.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/keyfigures/:_id",
+      "handler": "Keyfigure.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/keyfigures/:_id",
+      "handler": "Keyfigure.destroy",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

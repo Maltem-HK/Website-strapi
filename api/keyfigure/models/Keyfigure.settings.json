@@ -1,0 +1,33 @@
+{
+  "connection": "default",
+  "collectionName": "keyfigure",
+  "info": {
+    "name": "keyfigure",
+    "description": ""
+  },
+  "options": {
+    "timestamps": true
+  },
+  "attributes": {
+    "name": {
+      "default": "",
+      "type": "string"
+    },
+    "figure": {
+      "default": "",
+      "type": "integer"
+    },
+    "agglomerate": {
+      "model": "agglomerate",
+      "via": "keyfigures"
+    },
+    "description": {
+      "default": "",
+      "type": "text"
+    },
+    "title": {
+      "default": "",
+      "type": "string"
+    }
+  }
+}
