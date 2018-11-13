@@ -1,0 +1,25 @@
+{
+  "connection": "default",
+  "collectionName": "about",
+  "info": {
+    "name": "about",
+    "description": ""
+  },
+  "options": {
+    "timestamps": true
+  },
+  "attributes": {
+    "description": {
+      "default": "",
+      "type": "text"
+    },
+    "aboutcontents": {
+      "collection": "aboutcontent",
+      "via": "about"
+    },
+    "agglomerate": {
+      "model": "agglomerate",
+      "via": "about"
+    }
+  }
+}

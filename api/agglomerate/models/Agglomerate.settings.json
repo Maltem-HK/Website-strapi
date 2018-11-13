@@ -32,6 +32,10 @@
     "keyfigures": {
       "collection": "keyfigure",
       "via": "agglomerate"
+    },
+    "about": {
+      "model": "about",
+      "via": "agglomerate"
     }
   }
 }

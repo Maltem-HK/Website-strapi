@@ -2,48 +2,48 @@
   "routes": [
     {
       "method": "GET",
-      "path": "/keyfigures",
-      "handler": "Keyfigure.find",
+      "path": "/aboutcontents",
+      "handler": "Aboutcontent.find",
       "config": {
         "policies": []
       }
     },
     {
       "method": "GET",
-      "path": "/keyfigures/count",
-      "handler": "Keyfigure.count",
+      "path": "/aboutcontents/count",
+      "handler": "Aboutcontent.count",
       "config": {
         "policies": []
       }
     },
     {
       "method": "GET",
-      "path": "/keyfigures/:_id",
-      "handler": "Keyfigure.findOne",
+      "path": "/aboutcontents/:_id",
+      "handler": "Aboutcontent.findOne",
       "config": {
         "policies": []
       }
     },
     {
       "method": "POST",
-      "path": "/keyfigures",
-      "handler": "Keyfigure.create",
+      "path": "/aboutcontents",
+      "handler": "Aboutcontent.create",
       "config": {
         "policies": []
       }
     },
     {
       "method": "PUT",
-      "path": "/keyfigures/:_id",
-      "handler": "Keyfigure.update",
+      "path": "/aboutcontents/:_id",
+      "handler": "Aboutcontent.update",
       "config": {
         "policies": []
       }
     },
     {
       "method": "DELETE",
-      "path": "/keyfigures/:_id",
-      "handler": "Keyfigure.destroy",
+      "path": "/aboutcontents/:_id",
+      "handler": "Aboutcontent.destroy",
       "config": {
         "policies": []
       }
