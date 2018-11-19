@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/groupentities",
+      "handler": "Groupentity.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/groupentities/count",
+      "handler": "Groupentity.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/groupentities/:_id",
+      "handler": "Groupentity.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/groupentities",
+      "handler": "Groupentity.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/groupentities/:_id",
+      "handler": "Groupentity.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/groupentities/:_id",
+      "handler": "Groupentity.destroy",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

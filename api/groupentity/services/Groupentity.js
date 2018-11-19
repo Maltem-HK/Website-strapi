@@ -1,7 +1,7 @@
 'use strict';
 
 /**
- * Generalinformation.js service
+ * Groupentity.js service
  *
  * @description: A set of functions similar to controller's actions to avoid code duplication.
  */
@@ -12,21 +12,21 @@ const _ = require('lodash');
 module.exports = {
 
   /**
-   * Promise to fetch all generalinformations.
+   * Promise to fetch all groupentities.
    *
    * @return {Promise}
    */
 
   fetchAll: (params) => {
     // Convert `params` object to filters compatible with Mongo.
-    const filters = strapi.utils.models.convertParams('generalinformation', params);
+    const filters = strapi.utils.models.convertParams('groupentity', params);
     // Select field to populate.
-    const populate = Generalinformation.associations
+    const populate = Groupentity.associations
       .filter(ast => ast.autoPopulate !== false)
       .map(ast => ast.alias)
       .join(' ');
 
-    return Generalinformation
+    return Groupentity
       .find()
       .where(filters.where)
       .sort(filters.sort)
@@ -36,90 +36,90 @@ module.exports = {
   },
 
   /**
-   * Promise to fetch a/an generalinformation.
+   * Promise to fetch a/an groupentity.
    *
    * @return {Promise}
    */
 
   fetch: (params) => {
     // Select field to populate.
-    const populate = Generalinformation.associations
+    const populate = Groupentity.associations
       .filter(ast => ast.autoPopulate !== false)
       .map(ast => ast.alias)
       .join(' ');
 
-    return Generalinformation
-      .findOne(_.pick(params, _.keys(Generalinformation.schema.paths)))
+    return Groupentity
+      .findOne(_.pick(params, _.keys(Groupentity.schema.paths)))
       .populate(populate);
   },
 
   /**
-   * Promise to count generalinformations.
+   * Promise to count groupentities.
    *
    * @return {Promise}
    */
 
   count: (params) => {
     // Convert `params` object to filters compatible with Mongo.
-    const filters = strapi.utils.models.convertParams('generalinformation', params);
+    const filters = strapi.utils.models.convertParams('groupentity', params);
 
-    return Generalinformation
+    return Groupentity
       .count()
       .where(filters.where);
   },
 
   /**
-   * Promise to add a/an generalinformation.
+   * Promise to add a/an groupentity.
    *
    * @return {Promise}
    */
 
   add: async (values) => {
     // Extract values related to relational data.
-    const relations = _.pick(values, Generalinformation.associations.map(ast => ast.alias));
-    const data = _.omit(values, Generalinformation.associations.map(ast => ast.alias));
+    const relations = _.pick(values, Groupentity.associations.map(ast => ast.alias));
+    const data = _.omit(values, Groupentity.associations.map(ast => ast.alias));
 
     // Create entry with no-relational data.
-    const entry = await Generalinformation.create(data);
+    const entry = await Groupentity.create(data);
 
     // Create relational data and return the entry.
-    return Generalinformation.updateRelations({ _id: entry.id, values: relations });
+    return Groupentity.updateRelations({ _id: entry.id, values: relations });
   },
 
   /**
-   * Promise to edit a/an generalinformation.
+   * Promise to edit a/an groupentity.
    *
    * @return {Promise}
    */
 
   edit: async (params, values) => {
     // Extract values related to relational data.
-    const relations = _.pick(values, Generalinformation.associations.map(a => a.alias));
-    const data = _.omit(values, Generalinformation.associations.map(a => a.alias));
+    const relations = _.pick(values, Groupentity.associations.map(a => a.alias));
+    const data = _.omit(values, Groupentity.associations.map(a => a.alias));
 
     // Update entry with no-relational data.
-    const entry = await Generalinformation.update(params, data, { multi: true });
+    const entry = await Groupentity.update(params, data, { multi: true });
 
     // Update relational data and return the entry.
-    return Generalinformation.updateRelations(Object.assign(params, { values: relations }));
+    return Groupentity.updateRelations(Object.assign(params, { values: relations }));
   },
 
   /**
-   * Promise to remove a/an generalinformation.
+   * Promise to remove a/an groupentity.
    *
    * @return {Promise}
    */
 
   remove: async params => {
     // Select field to populate.
-    const populate = Generalinformation.associations
+    const populate = Groupentity.associations
       .filter(ast => ast.autoPopulate !== false)
       .map(ast => ast.alias)
       .join(' ');
 
     // Note: To get the full response of Mongo, use the `remove()` method
     // or add spent the parameter `{ passRawResult: true }` as second argument.
-    const data = await Generalinformation
+    const data = await Groupentity
       .findOneAndRemove(params, {})
       .populate(populate);
 
@@ -128,7 +128,7 @@ module.exports = {
     }
 
     await Promise.all(
-      Generalinformation.associations.map(async association => {
+      Groupentity.associations.map(async association => {
         const search = _.endsWith(association.nature, 'One') || association.nature === 'oneToMany' ? { [association.via]: data._id } : { [association.via]: { $in: [data._id] } };
         const update = _.endsWith(association.nature, 'One') || association.nature === 'oneToMany' ? { [association.via]: null } : { $pull: { [association.via]: data._id } };
 
@@ -145,22 +145,22 @@ module.exports = {
   },
 
   /**
-   * Promise to search a/an generalinformation.
+   * Promise to search a/an groupentity.
    *
    * @return {Promise}
    */
 
   search: async (params) => {
     // Convert `params` object to filters compatible with Mongo.
-    const filters = strapi.utils.models.convertParams('generalinformation', params);
+    const filters = strapi.utils.models.convertParams('groupentity', params);
     // Select field to populate.
-    const populate = Generalinformation.associations
+    const populate = Groupentity.associations
       .filter(ast => ast.autoPopulate !== false)
       .map(ast => ast.alias)
       .join(' ');
 
-    const $or = Object.keys(Generalinformation.attributes).reduce((acc, curr) => {
-      switch (Generalinformation.attributes[curr].type) {
+    const $or = Object.keys(Groupentity.attributes).reduce((acc, curr) => {
+      switch (Groupentity.attributes[curr].type) {
         case 'integer':
         case 'float':
         case 'decimal':
@@ -184,7 +184,7 @@ module.exports = {
       }
     }, []);
 
-    return Generalinformation
+    return Groupentity
       .find({ $or })
       .sort(filters.sort)
       .skip(filters.start)

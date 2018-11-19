@@ -1,0 +1,35 @@
+{
+  "connection": "default",
+  "collectionName": "groupentity",
+  "info": {
+    "name": "groupentity",
+    "description": ""
+  },
+  "options": {
+    "timestamps": true
+  },
+  "attributes": {
+    "name": {
+      "default": "",
+      "type": "string"
+    },
+    "title": {
+      "default": "",
+      "type": "string"
+    },
+    "description": {
+      "default": "",
+      "type": "text"
+    },
+    "logo": {
+      "model": "file",
+      "via": "related",
+      "plugin": "upload",
+      "required": false
+    },
+    "groupdescription": {
+      "model": "groupdescription",
+      "via": "groupentities"
+    }
+  }
+}

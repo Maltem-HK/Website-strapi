@@ -1,8 +1,8 @@
 {
   "connection": "default",
-  "collectionName": "generalinformation",
+  "collectionName": "groupdescription",
   "info": {
-    "name": "generalinformation",
+    "name": "groupdescription",
     "description": ""
   },
   "options": {
@@ -13,9 +13,13 @@
       "default": "",
       "type": "text"
     },
+    "groupentities": {
+      "collection": "groupentity",
+      "via": "groupdescription"
+    },
     "agglomerate": {
       "model": "agglomerate",
-      "via": "generalinformation"
+      "via": "groupdescription"
     }
   }
 }

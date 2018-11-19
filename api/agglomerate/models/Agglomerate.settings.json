@@ -21,10 +21,6 @@
       "collection": "welcomeword",
       "via": "agglomerate"
     },
-    "generalinformation": {
-      "model": "generalinformation",
-      "via": "agglomerate"
-    },
     "team": {
       "model": "team",
       "via": "agglomerate"
@@ -35,6 +31,10 @@
     },
     "about": {
       "model": "about",
+      "via": "agglomerate"
+    },
+    "groupdescription": {
+      "model": "groupdescription",
       "via": "agglomerate"
     }
   }

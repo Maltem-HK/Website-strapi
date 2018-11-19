@@ -1,7 +1,7 @@
 'use strict';
 
 /**
- * Lifecycle callbacks for the `Generalinformation` model.
+ * Lifecycle callbacks for the `Groupentity` model.
  */
 
 module.exports = {

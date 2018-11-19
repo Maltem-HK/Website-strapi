@@ -2,48 +2,48 @@
   "routes": [
     {
       "method": "GET",
-      "path": "/generalinformations",
-      "handler": "Generalinformation.find",
+      "path": "/groupdescriptions",
+      "handler": "Groupdescription.find",
       "config": {
         "policies": []
       }
     },
     {
       "method": "GET",
-      "path": "/generalinformations/count",
-      "handler": "Generalinformation.count",
+      "path": "/groupdescriptions/count",
+      "handler": "Groupdescription.count",
       "config": {
         "policies": []
       }
     },
     {
       "method": "GET",
-      "path": "/generalinformations/:_id",
-      "handler": "Generalinformation.findOne",
+      "path": "/groupdescriptions/:_id",
+      "handler": "Groupdescription.findOne",
       "config": {
         "policies": []
       }
     },
     {
       "method": "POST",
-      "path": "/generalinformations",
-      "handler": "Generalinformation.create",
+      "path": "/groupdescriptions",
+      "handler": "Groupdescription.create",
       "config": {
         "policies": []
       }
     },
     {
       "method": "PUT",
-      "path": "/generalinformations/:_id",
-      "handler": "Generalinformation.update",
+      "path": "/groupdescriptions/:_id",
+      "handler": "Groupdescription.update",
       "config": {
         "policies": []
       }
     },
     {
       "method": "DELETE",
-      "path": "/generalinformations/:_id",
-      "handler": "Generalinformation.destroy",
+      "path": "/groupdescriptions/:_id",
+      "handler": "Groupdescription.destroy",
       "config": {
         "policies": []
       }
